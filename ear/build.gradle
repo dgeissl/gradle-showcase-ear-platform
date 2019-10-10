@@ -1,0 +1,13 @@
+plugins {
+    id 'ear'
+}
+
+repositories.jcenter()
+
+dependencies {
+    earlib platform(project(':'))
+    deploy platform(project(':'))
+
+    earlib 'commons-lang:commons-lang'
+    deploy 'commons-logging:commons-logging'
+}

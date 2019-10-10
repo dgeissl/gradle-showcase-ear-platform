@@ -1,0 +1,12 @@
+plugins {
+    id 'java-platform'
+}
+
+repositories.jcenter()
+
+dependencies {
+    constraints {
+        api 'commons-logging:commons-logging:1.2'
+        api 'commons-lang:commons-lang:1.0'
+    }
+}
