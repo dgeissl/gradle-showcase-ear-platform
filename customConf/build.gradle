@@ -1,0 +1,19 @@
+repositories.jcenter()
+
+configurations {
+    nonTransitive {
+        transitive = false
+    }
+}
+
+dependencies {
+    nonTransitive platform(project(':'))
+    
+    nonTransitive 'commons-lang:commons-lang'
+}
+
+task showNonTransitiveDeps(){
+    doLast {
+        println configurations.nonTransitive.files
+    }
+}
